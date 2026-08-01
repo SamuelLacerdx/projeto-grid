@@ -3,51 +3,85 @@
   padding: 0px;
   margin: 0px;
   text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-img{
-    display: block;
-   max-width: 100%;
+img {
+  display: block;
+  max-width: 100%;
 }
 
-body{
-    display: grid;
-    height: 100dvh;
-    grid-template-columns: 60px 1fr 2fr;
+body {
+  display: grid;
+  height: 100dvh;
+  grid-template-columns: 60px 1fr 2fr;
 }
 
-nav{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #F7F5F2;
-    
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f7f5f2;
 }
 
-.container-nav{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-
+.container-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
 }
 
-.container-nav > img{
-    border-radius: 100%;
-    padding: 7px;
-    width: 40px;
+.container-nav > img {
+  border-radius: 100%;
+  padding: 7px;
+  width: 40px;
 }
 
-.container-nav > img:hover{
-    background-color: #32A961;
+.container-nav > img:hover {
+  background-color: gainsboro;
 }
 
-section{
-    background-color: brown;
+section {
+  background-color: #ffffff;
 }
 
-main{
-    background-color: blueviolet;
+.container-topo-mensagens {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo {
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.titulo > h1 {
+  font-size: 30px;
+  color: #4bb67a;
+}
+
+.icons-titulo {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.icons-titulo > img {
+  border-radius: 100%;
+  padding: 7px;
+  width: 40px;
+}
+
+.icons-titulo > img:hover {
+  background-color: gainsboro;
+}
+
+
+main {
+  background-color: blueviolet;
 }
