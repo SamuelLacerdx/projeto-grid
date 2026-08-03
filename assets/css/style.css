@@ -45,6 +45,8 @@ nav {
 
 section {
   background-color: #ffffff;
+    overflow-y: scroll;
+
 }
 
 .container-topo-mensagens {
@@ -120,7 +122,6 @@ input:focus {
 
 .container-mensagens {
   height: 100%;
-  overflow-y: scroll;
 }
 
 .card-mensagem {
@@ -129,7 +130,20 @@ input:focus {
   grid-template-rows: 24px 24px;
   justify-content: center;
   padding: 20px;
-  position: relative;
+ 
+}
+
+.bola-mensagem{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  background-color: #32A961;
+  border-radius: 100%;
+  justify-self: center;
+  color: white;
+  font-size: small;
 }
 
 .card-mensagem > img {
@@ -147,6 +161,9 @@ input:focus {
 
 .previa-mensagem{
   color: gray;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .horario-mensagem{
