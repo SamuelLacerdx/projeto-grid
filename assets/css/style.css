@@ -14,7 +14,7 @@ img {
 body {
   display: grid;
   height: 100dvh;
-  grid-template-columns: 60px 1fr 2fr;
+  grid-template-columns: 60px 460px 2fr;
 }
 
 nav {
@@ -94,6 +94,10 @@ input {
   outline: none;
 }
 
+input:hover {
+  border: 1px solid gainsboro;
+}
+
 input:focus {
   border: 1px solid #33a133;
 }
@@ -110,6 +114,42 @@ input:focus {
   padding: 5px 10px;
 }
 
-.atalhos-itens:first-child(1){
-    background-color: #d8f8d2;
+.atalhos-itens button:first-child {
+  background-color: #d8f8d2;
+}
+
+.container-mensagens {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.card-mensagem {
+  display: grid;
+  grid-template-columns: 70px 1fr 50px;
+  grid-template-rows: 24px 24px;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+}
+
+.card-mensagem > img {
+  height: 100%;
+  border-radius: 100%;
+  width: 50px;
+  grid-row: 1/-1;
+  justify-self: center;
+}
+
+.card-mensagem > p{
+  align-self: center;
+  align-items: start;
+}
+
+.previa-mensagem{
+  color: gray;
+}
+
+.horario-mensagem{
+  color: #53B06D;
+  font-size: 4mm;
 }
