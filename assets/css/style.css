@@ -43,16 +43,26 @@ nav {
   background-color: gainsboro;
 }
 
+.container-mensagens {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
 section {
   background-color: #ffffff;
-    overflow-y: scroll;
-
+  border-right: 1px solid #e3e3e3;
+  height: 100vh; /* ou 100dvh, igual ao body */
+  overflow: hidden;
 }
 
 .container-topo-mensagens {
   padding: 10px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .titulo {
@@ -120,26 +130,21 @@ input:focus {
   background-color: #d8f8d2;
 }
 
-.container-mensagens {
-  height: 100%;
-}
-
 .card-mensagem {
   display: grid;
   grid-template-columns: 70px 1fr 50px;
   grid-template-rows: 24px 24px;
   justify-content: center;
   padding: 20px;
- 
 }
 
-.bola-mensagem{
+.bola-mensagem {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 25px;
   height: 25px;
-  background-color: #32A961;
+  background-color: #32a961;
   border-radius: 100%;
   justify-self: center;
   color: white;
@@ -154,19 +159,74 @@ input:focus {
   justify-self: center;
 }
 
-.card-mensagem > p{
+.card-mensagem > p {
   align-self: center;
   align-items: start;
 }
 
-.previa-mensagem{
+.previa-mensagem {
   color: gray;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.horario-mensagem{
-  color: #53B06D;
+.horario-mensagem {
+  color: #53b06d;
   font-size: 4mm;
+}
+
+.card-mensagem:hover {
+  background-color: gainsboro;
+  border-radius: 10px;
+}
+
+main {
+  background-image: url(../imgs/whatsapp_bg.png);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.cabecalho-conversa {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  justify-content: space-between;
+}
+
+.perfil-conversa {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.perfil-conversa > img {
+  border-radius: 100%;
+  padding: 15px;
+  width: 75px;
+}
+
+.nome-conversa > h2 {
+  font-size: 20px;
+}
+
+.icons-cabecalho {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-right: 20px;
+}
+
+.icons-cabecalho > img {
+  border-radius: 100%;
+  padding: 5px;
+  width: 35px;
+  height: 35px;
+}
+
+.icons-cabecalho > img:hover {
+  background-color: gainsboro;
 }
