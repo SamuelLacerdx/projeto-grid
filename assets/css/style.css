@@ -245,21 +245,26 @@ main {
   padding: 10px;
 }
 
-.enviadas, .recebidas{
+.enviadas,
+.recebidas {
 }
-.recebidas { 
+.recebidas {
   position: relative;
   grid-column: 2/14;
   align-self: flex-start;
-  max-width: 60%; 
+  width: fit-content;
   background-color: white;
   padding: 5px 10px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap: 10px;
 }
 
 .enviadas {
   align-self: flex-end;
-  min-width: 60%;
+  width: fit-content;
   position: relative;
   grid-column: 12/24;
   background-color: #d8f8d2;
@@ -273,7 +278,6 @@ main {
   justify-content: end;
   font-size: 11px;
   color: #667781;
-
 }
 
 .pingelo-zapzap-recebida {
@@ -288,8 +292,8 @@ main {
   left: -12px;
 }
 
-.pingelo-zapzap-enviadas{
-    position: absolute;
+.pingelo-zapzap-enviadas {
+  position: absolute;
   width: 5px;
   height: 5px;
   border-left: 15px solid transparent;
