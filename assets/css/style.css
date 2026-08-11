@@ -248,6 +248,7 @@ main {
 .enviadas, .recebidas{
 }
 .recebidas { 
+  position: relative;
   grid-column: 2/14;
   background-color: white;
   padding: 5px 10px;
@@ -267,5 +268,18 @@ main {
   justify-content: end;
   font-size: 11px;
   color: #667781;
+
+}
+
+.pingelo-zapzap {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid white;
+  top: 0px;
+  rotate: -180deg;
+  left: -15px;
 
 }
