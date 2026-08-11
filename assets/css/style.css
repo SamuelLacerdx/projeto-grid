@@ -256,6 +256,7 @@ main {
 }
 
 .enviadas {
+  position: relative;
   grid-column: 12/24;
   background-color: #d8f8d2;
   padding: 5px 10px;
@@ -271,7 +272,7 @@ main {
 
 }
 
-.pingelo-zapzap {
+.pingelo-zapzap-recebida {
   position: absolute;
   width: 5px;
   height: 5px;
@@ -280,6 +281,17 @@ main {
   border-bottom: 15px solid white;
   top: 0px;
   rotate: -180deg;
-  left: -15px;
+  left: -12px;
+}
 
+.pingelo-zapzap-enviadas{
+    position: absolute;
+  width: 5px;
+  height: 5px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #d8f8d2;
+  top: 0px;
+  rotate: -180deg;
+  right: -12px;
 }
