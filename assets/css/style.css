@@ -250,12 +250,16 @@ main {
 .recebidas { 
   position: relative;
   grid-column: 2/14;
+  align-self: flex-start;
+  max-width: 60%; 
   background-color: white;
   padding: 5px 10px;
   border-radius: 10px;
 }
 
 .enviadas {
+  align-self: flex-end;
+  min-width: 60%;
   position: relative;
   grid-column: 12/24;
   background-color: #d8f8d2;
