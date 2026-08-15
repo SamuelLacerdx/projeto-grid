@@ -616,20 +616,20 @@ export const usuarios = {
   ],
 };
 
-// let idUsuario = 0;
-
 export function listarUsuarios() {
   console.table(usuarios["whats-users"]);
 }
 
 export function contatos(idUsuario) {
-  console.table(usuarios["whats-users"][idUsuario].contacts);
+  return usuarios["whats-users"][idUsuario].contacts;
 }
 
 // export function mostraContato() {
 //   console.table(usuarios["whats-users"][idUsuario].contacts[0]);
 // }
 
-export function mostrarConversa(idUsuario,idContato) {
-  console.table(usuarios["whats-users"][idUsuario].contacts[idContato].messages);
+export function mostrarConversa(idUsuario, idContato) {
+  console.table(
+    usuarios["whats-users"][idUsuario].contacts[idContato].messages,
+  );
 }
