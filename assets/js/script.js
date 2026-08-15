@@ -8,7 +8,7 @@ const elemento = {
   lista_contatos: document.querySelector(".container-mensagens"),
 };
 
-function criarContatos(srcFoto, nome, hora, previa, naolidas) {
+function criarContatos(idContato,nome, hora, previa, naolidas) {
   // criação dos elementos do card contatos
   const cardContato = document.createElement("div");
   const fotoContato = document.createElement("img");
@@ -26,23 +26,29 @@ function criarContatos(srcFoto, nome, hora, previa, naolidas) {
   msgNaoLidas.className = "bola-mensagem";
 
   //   preenche os dados que serão recebidos como parametro função
-  fotoContato.src = srcFoto;
+fotoContato.src = `https://i.pravatar.cc/150?img=${idContato + 1}`
   nomeContato.innerText = nome;
   horaMsg.innerText = hora;
   previaMsg.innerText = previa;
   msgNaoLidas.innerText = naolidas;
 
-//   cardContato.id = idContato;
+  cardContato.id = idContato;
 
   cardContato.append(fotoContato, nomeContato, horaMsg, previaMsg, msgNaoLidas);
 
   elemento.lista_contatos.append(cardContato);
 }
 
-contatos(0).forEach(element => {
-    criarContatos(
-        element.image,
-        element.name,
-        element.messages,
-    )
+contatos(0).forEach((element, index) => {
+  const mensagensRecebidas = element.messages.filter(
+    (msg) => msg.sender !== "me"
+  ).length;
+
+  criarContatos(
+    index,
+    element.name,
+    element.messages.at(-1).time,
+    element.messages.at(-1).content,
+    mensagensRecebidas
+  );
 });

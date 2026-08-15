@@ -633,3 +633,8 @@ export function mostrarConversa(idUsuario, idContato) {
     usuarios["whats-users"][idUsuario].contacts[idContato].messages,
   );
 }
+
+function teste() {
+  console.table(usuarios["whats-users"][0].contacts);
+}
+teste()
