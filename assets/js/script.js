@@ -6,6 +6,10 @@ import { contatos, listarUsuarios, mostrarConversa } from "./contatos.js";
 
 const elemento = {
   lista_contatos: document.querySelector(".container-mensagens"),
+  perfil: document.querySelector(".perfil-usuario"),
+  mensagems_perfil: document.querySelector(".contatos"),
+  foto_perfil: document.querySelector(".foto-perfil"),
+  containerMensagens: document.querySelector(".container-conversa"),
 };
 
 function criarContatos(idContato,nome, hora, previa, naolidas) {
@@ -52,3 +56,13 @@ contatos(0).forEach((element, index) => {
     mensagensRecebidas
   );
 });
+
+// apaecer e desaparacerer perfil
+function mostarPerfil(){
+  elemento.foto_perfil.addEventListener('click', (evento) =>{
+    evento.preventDefault();
+    elemento.mensagems_perfil.classList.toggle("ocultar")
+    elemento.perfil.classList.toggle("ocultar")
+  })
+}
+mostarPerfil()

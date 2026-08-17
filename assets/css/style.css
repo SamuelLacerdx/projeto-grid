@@ -304,12 +304,8 @@ main {
   right: -12px;
 }
 
-.ocultar {
-  display: none;
-}
-
 .perfil-usuario {
-  background-color: gainsboro;
+  background-color: white;
   border-right: 1px solid #e3e3e3;
   height: 100dvh;
   overflow: hidden;
@@ -319,6 +315,9 @@ main {
   gap: 10px;
 }
 
+.ocultar {
+  display: none;
+}
 .titulo-perfil {
   width: 100%;
   padding: 10px 20px;
@@ -348,9 +347,19 @@ main {
   gap: 42px;
 }
 
-.nome_perfil {
+.nome_perfil, .telefone_perfil, .recado_perfil {
   display: flex;
   flex-direction: column;
-  gap: 42px
+  gap: 25px
   ;
+}
+
+.nome_perfil > p:not([class]),
+.telefone_perfil > p:not([class]),
+.recado_perfil > p:not([class]) {
+  font-size: 23px;
+}
+
+.nome-usuario, .recado-usuario, .numero-usuario > p{
+  font-size: 20px;
 }
