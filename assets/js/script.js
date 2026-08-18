@@ -61,7 +61,7 @@ contatos(0).forEach((element, index) => {
     mensagensRecebidas
   );
 });
-
+mostrarConversa(0, 0);
 // apaecer e desaparacerer perfil
 function mostarPerfil(){
   elemento.foto_perfil.addEventListener('click', (evento) =>{
