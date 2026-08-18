@@ -9,7 +9,7 @@ const elemento = {
   perfil: document.querySelector(".perfil-usuario"),
   mensagems_perfil: document.querySelector(".contatos"),
   foto_perfil: document.querySelector(".foto-perfil"),
-  containerMensagens: document.querySelector(".container-conversa"),
+  containerMensagens: document.querySelector(".grid-msg"),
 };
 
 function criarContatos(idContato,nome, hora, previa, naolidas) {
@@ -41,6 +41,11 @@ fotoContato.src = `https://i.pravatar.cc/150?img=${idContato + 1}`
   cardContato.append(fotoContato, nomeContato, horaMsg, previaMsg, msgNaoLidas);
 
   elemento.lista_contatos.append(cardContato);
+
+  cardContato.addEventListener("click", () => {
+  mostrarConversa(0, idContato); 
+});
+
 }
 
 contatos(0).forEach((element, index) => {

@@ -629,12 +629,34 @@ export function contatos(idUsuario) {
 // }
 
 export function mostrarConversa(idUsuario, idContato) {
-  console.table(
-    usuarios["whats-users"][idUsuario].contacts[idContato].messages,
-  );
+  const listaContatos = contatos(idUsuario);
+  const contato = listaContatos[idContato];
+
+  document.querySelector(".perfil-conversa img").src =
+    `https://i.pravatar.cc/150?img=${idContato + 1}`;
+  document.querySelector(".nome-conversa h2").innerText = contato.name;
+
+  const containerConversa = document.querySelector(".grid-msg");
+
+  containerConversa.innerHTML = "";
+
+  contato.messages.forEach((msg) => {
+    const balao = document.createElement("div");
+    const texto = document.createElement("p");
+    const pingelo = document.createElement("div");
+    const horario = document.createElement("span");
+
+    balao.className = msg.sender === "me" ? "enviadas" : "recebidas";
+    texto.innerText = msg.content;
+    horario.innerText = msg.time;
+    horario.className = "horario-msg";
+
+    balao.append(texto, horario);
+    containerConversa.append(balao);
+  });
 }
 
 function teste() {
   console.table(usuarios["whats-users"][0].contacts);
 }
-teste()
+teste();
