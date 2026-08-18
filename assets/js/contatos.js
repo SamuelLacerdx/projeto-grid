@@ -647,11 +647,13 @@ export function mostrarConversa(idUsuario, idContato) {
     const horario = document.createElement("span");
 
     balao.className = msg.sender === "me" ? "enviadas" : "recebidas";
+    pingelo.className = msg.sender === "me" ? "pingelo-zapzap-enviadas" : "pingelo-zapzap-recebida";
+
     texto.innerText = msg.content;
     horario.innerText = msg.time;
     horario.className = "horario-msg";
 
-    balao.append(texto, horario);
+    balao.append(pingelo,texto, horario);
     containerConversa.append(balao);
   });
 }
