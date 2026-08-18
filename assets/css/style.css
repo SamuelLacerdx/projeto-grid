@@ -263,6 +263,7 @@ main {
 }
 
 .enviadas {
+  justify-self: flex-end;
   align-self: flex-end;
   width: fit-content;
   position: relative;
